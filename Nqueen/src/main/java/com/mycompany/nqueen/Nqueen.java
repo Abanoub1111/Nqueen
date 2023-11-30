@@ -1,22 +1,21 @@
-package com.mycompany.nqueen;
+package N_queens_solver_package;
 
-import java.util.Arrays;
-import java.util.ArrayList; // import the ArrayList class
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import com.mycompany.nqueen.SolutionOBJ;
+import N_queens_solver_package.SolutionOBJ;
 
-public class Nqueen extends Thread {
+public class SolverThread extends Thread {
 
-    public static List<SolutionOBJ> solutions = Collections.synchronizedList(new ArrayList<SolutionOBJ>());
+    private static volatile SolutionOBJ Solution;
+    private static volatile boolean solutionFound = false;
     boolean[][] board;
     int col;
     int row;
     static int N;
     int TN;
 
-    public Nqueen(boolean[][] board, int row, int N, int TN) {
+    public SolverThread(boolean[][] board, int row, int N, int TN) {
         this.board = board;
         this.row = row;
         this.N = N;
@@ -51,12 +50,13 @@ public class Nqueen extends Thread {
     }
 
     private static void theBt(boolean[][] board, int row, int TN) {
-        if (row == board.length) {
-            addSolution(new SolutionOBJ(board, TN));
+        if (row == board.length && !solutionFound) {
+            addSolution(board, TN);
+            solutionFound = true;
             return;
         }
 
-        for (int i = 0; i < board.length; i++) {
+        for (int i = 0; i < board.length && !solutionFound; i++) {
             if (isValid(board, row, i)) {
                 board[row][i] = true;
                 theBt(board, row + 1, TN);
@@ -70,12 +70,18 @@ public class Nqueen extends Thread {
         theBt(board, row, TN);
     }
 
-    private static void addSolution(SolutionOBJ solution) {
-        boolean[][] copiedBoard = new boolean[solution.board.length][solution.board.length];
-        for (int i = 0; i < solution.board.length; i++) {
-            copiedBoard[i] = solution.board[i].clone();
+    private static synchronized void addSolution(boolean[][] boardWithSolution, int TN) {
+        boolean[][] copiedBoard = new boolean[boardWithSolution.length][boardWithSolution.length];
+        for (int i = 0; i < boardWithSolution.length; i++) {
+            copiedBoard[i] = boardWithSolution[i].clone();
         }
-        solutions.add(new SolutionOBJ(copiedBoard, solution.TN));
+        Solution = new SolutionOBJ(copiedBoard, TN);
     }
-
+    public static SolutionOBJ getSolution() {
+        return Solution;
+    }
+    
+    public static boolean isSolutionFound() {
+        return solutionFound;
+    }
 }
