@@ -1,11 +1,11 @@
-package N_queens_solver_package;
+package com.mycompany.nqueen;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import N_queens_solver_package.SolutionOBJ;
+import com.mycompany.nqueen.SolutionOBJ;
 
-public class SolverThread extends Thread {
+public class Nqueen extends Thread {
 
     private static volatile SolutionOBJ Solution;
     private static volatile boolean solutionFound = false;
@@ -15,7 +15,7 @@ public class SolverThread extends Thread {
     static int N;
     int TN;
 
-    public SolverThread(boolean[][] board, int row, int N, int TN) {
+    public Nqueen(boolean[][] board, int row, int N, int TN) {
         this.board = board;
         this.row = row;
         this.N = N;
