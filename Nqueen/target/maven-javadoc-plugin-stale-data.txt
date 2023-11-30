@@ -1,0 +1,45 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'21'
+-sourcepath
+'C:/Users/abano/Downloads/Compressed/project/Nqueen/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/abano/Downloads/Compressed/project/Nqueen/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Nqueen 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Nqueen 1.0-SNAPSHOT API'
+com.mycompany.nqueen
+C:\Users\abano\Downloads\Compressed\project\Nqueen\src\main\java = 1701280813507
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\allclasses-index.html = 1701291360716
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\allpackages-index.html = 1701291360723
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\copy.svg = 1701291360788
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\element-list = 1701291360607
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\help-doc.html = 1701291360770
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\index-all.html = 1701291360754
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\index.html = 1701291360763
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\link.svg = 1701291360790
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\member-search-index.js = 1701291360730
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\module-search-index.js = 1701291360725
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\overview-tree.html = 1701291360682
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\package-search-index.js = 1701291360726
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\script.js = 1701291360784
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\search-page.js = 1701291360832
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\search.html = 1701291360760
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\search.js = 1701291360830
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\stylesheet.css = 1701291360782
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\tag-search-index.js = 1701291360732
+C:\Users\abano\Downloads\Compressed\project\Nqueen\target\site\apidocs\type-search-index.js = 1701291360728
