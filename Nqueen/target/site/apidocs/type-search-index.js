@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.mycompany.nqueen","l":"Nqueen"},{"p":"com.mycompany.nqueen","l":"SolutionOBJ"}];updateSearchResults();
